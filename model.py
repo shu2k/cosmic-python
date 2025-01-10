@@ -25,7 +25,7 @@ class Batch:
             self._allocations.add(line)
 
     def deallocate(self, line: OrderLine):
-        if line not in self._allocations:
+        if line in self._allocations:
             self._allocations.remove(line)
 
     @property
